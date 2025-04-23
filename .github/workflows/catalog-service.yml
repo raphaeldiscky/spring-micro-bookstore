@@ -1,17 +1,18 @@
 name: Catalog Service
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - catalog-service/**
     branches:
-      - 'main'
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     env:
       working-directory: ./catalog-service
