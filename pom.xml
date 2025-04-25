@@ -5,10 +5,10 @@
 	https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.raphaeldiscky</groupId>
-    <artifactId>spring-micro</artifactId>
+    <artifactId>spring-micro-bookstore</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>spring-micro</name>
+    <name>spring-micro-bookstore</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

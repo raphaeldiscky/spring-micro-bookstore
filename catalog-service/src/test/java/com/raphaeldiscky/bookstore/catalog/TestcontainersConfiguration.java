@@ -1,4 +1,4 @@
-package com.raphael.bookstore.catalog_service;
+package com.raphaeldiscky.bookstore.catalog;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;

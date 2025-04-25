@@ -1,4 +1,4 @@
-package com.raphael.bookstore.catalog_service;
+package com.raphaeldiscky.bookstore.catalog;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
