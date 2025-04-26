@@ -1,10 +1,10 @@
-name: Catalog Service
+name: Order Service
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - catalog-service/**
+      - order-service/**
     branches:
       - main
   pull_request:
@@ -15,8 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./catalog-service
-      DOCKER_IMAGE_NAME: ${{ vars.DOCKER_USERNAME }}/bookstore-catalog-service
+      working-directory: ./order-service
+      DOCKER_IMAGE_NAME: ${{ vars.DOCKER_USERNAME }}/bookstore-order-service
     defaults:
       run:
         working-directory: ${{ env.working-directory }}
