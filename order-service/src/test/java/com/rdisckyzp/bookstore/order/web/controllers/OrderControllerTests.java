@@ -33,19 +33,13 @@ class OrderControllerTests extends AbstractIT {
                                               "country": "Indonesia"
                                             },
                                             "items": [
-                                              {
-                                                "code": "BOOK-001",
-                                                "name": "The Great Gatsby",
-                                                "price": 19.99,
-                                                "quantity": 1
-                                              },
-                                              {
-                                                "code": "BOOK-002",
-                                                "name": "1984",
-                                                "price": 14.99,
-                                                "quantity": 2
-                                              }
-                                            ]
+                                                 {
+                                                   "code": "P100",
+                                                   "name": "Product 1",
+                                                   "price": 34.00,
+                                                   "quantity": 1
+                                                 }
+                                              ]
                                           }
 
                             """;
