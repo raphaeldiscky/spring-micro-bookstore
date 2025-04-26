@@ -1,17 +1,16 @@
 package com.rdisckyzp.bookstore.order.web.controllers;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.notNullValue;
-
 import com.rdisckyzp.bookstore.order.AbstractIT;
 import com.rdisckyzp.bookstore.order.testdata.TestDataFactory;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
-import org.springframework.test.context.jdbc.Sql;
 
-@Sql("/test-orders.sql")
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.notNullValue;
+
+
 class OrderControllerTests extends AbstractIT {
 
     @Nested
@@ -49,7 +48,7 @@ class OrderControllerTests extends AbstractIT {
                                               }
                                             ]
                                           }
-
+                            
                             """;
             given().contentType(ContentType.JSON)
                     .body(payload)
