@@ -7,3 +7,7 @@
 ### Package by components
 
 ![package-by-components](docs/package-by-components.png)
+
+### RabbitMQ architecture
+
+![rabbitmq-architecture](docs/rabbitmq-architecture.png)

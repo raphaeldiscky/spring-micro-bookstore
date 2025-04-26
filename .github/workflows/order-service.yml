@@ -1,10 +1,10 @@
-name: Catalog Service
+name: Order Service
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - catalog-service/**
+      - order-service/**
     branches:
       - main
   pull_request:
@@ -15,8 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./catalog-service
-      DOCKER_IMAGE_NAME: ${{ vars.DOCKER_USERNAME }}/bookstore-catalog-service
+      working-directory: ./order-service
+      DOCKER_IMAGE_NAME: ${{ vars.DOCKER_USERNAME }}/bookstore-order-service
     defaults:
       run:
         working-directory: ${{ env.working-directory }}
@@ -49,4 +49,3 @@ jobs:
           ./mvnw spring-boot:build-image -DskipTests
           echo "Pushing the image $DOCKER_IMAGE_NAME to Docker Hub..."
           docker push $DOCKER_IMAGE_NAME
-
