@@ -1,5 +1,6 @@
 package com.rdisckyzp.bookstore.order.web.controllers;
 
+import com.rdisckyzp.bookstore.order.web.controllers.models.MyPayload;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 
