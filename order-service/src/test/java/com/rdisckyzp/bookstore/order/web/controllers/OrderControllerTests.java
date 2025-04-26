@@ -40,6 +40,7 @@ class OrderControllerTests extends AbstractIT {
                                                    "quantity": 1
                                                  }
                                               ]
+                                            }
                                           }
 
                             """;
