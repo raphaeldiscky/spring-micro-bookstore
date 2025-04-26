@@ -1,6 +1,7 @@
 package com.rdisckyzp.bookstore.order.web.controllers;
 
 import com.rdisckyzp.bookstore.order.ApplicationProperties;
+import com.rdisckyzp.bookstore.order.web.controllers.models.MyMessage;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
