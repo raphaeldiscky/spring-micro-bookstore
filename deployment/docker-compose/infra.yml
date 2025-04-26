@@ -1,4 +1,4 @@
-name: 'spring-micro'
+name: 'spring-micro-bookstore'
 services:
   catalog-db:
     image: postgres:16-alpine
