@@ -1,4 +1,3 @@
 package com.rdisckyzp.bookstore.order.web.controllers.models;
 
-public record MyMessage(String routingKey, MyPayload payload) {
-}
+public record MyMessage(String routingKey, MyPayload payload) {}
