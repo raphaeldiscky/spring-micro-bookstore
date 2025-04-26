@@ -9,6 +9,10 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.context.annotation.Import;
 import org.testcontainers.utility.TestcontainersConfiguration;
 
+// @NOTE: if write tests only web layer component -> use webMvcTest
+// if write tests only repository -> use DataJpaTest
+// if integration tests -> using SpringBootTest
+
 @Import(TestcontainersConfiguration.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 public abstract class AbstractIT {

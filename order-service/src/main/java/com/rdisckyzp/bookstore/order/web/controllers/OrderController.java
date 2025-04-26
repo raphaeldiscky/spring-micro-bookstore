@@ -29,6 +29,7 @@ class OrderController {
         String userName = securityService.getLoginUserName();
         log.info("Creating order for user: {}", userName);
         // @NOTE: service layer should be completely independent of any web layer
+        // add unit tests for web layer methods
         return orderService.createOrder(userName, request);
     }
 }
