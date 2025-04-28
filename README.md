@@ -11,3 +11,11 @@
 ### RabbitMQ architecture
 
 ![rabbitmq-architecture](docs/rabbitmq-architecture.png)
+
+### Resilience Patterns
+
+![resilience-patterns](docs/resilience-patterns.png)
+
+### Outbox pattern
+
+![outbox-pattern](docs/outbox-pattern.png)
