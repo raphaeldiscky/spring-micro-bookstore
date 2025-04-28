@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.5</version>
+        <version>3.4.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.rdisckyzp</groupId>
@@ -28,8 +28,12 @@
     </scm>
     <properties>
         <java.version>21</java.version>
-        <spring-cloud.version>2024.0.1</spring-cloud.version>
+        <springdoc-openapi.version>2.8.6</springdoc-openapi.version>
+        <resilience4j.version>2.3.0</resilience4j.version>
         <instancio.version>5.4.0</instancio.version>
+        <wiremock.version>3.13.0</wiremock.version>
+        <wiremock-testcontainers.version>1.0-alpha-15</wiremock-testcontainers.version>
+        <spotless-maven-plugin.version>2.44.3</spotless-maven-plugin.version>
         <dockerImageName>rdisckyzp/bookstore-${project.artifactId}</dockerImageName>
     </properties>
     <dependencies>
@@ -62,13 +66,14 @@
             <artifactId>flyway-database-postgresql</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-spring-boot3</artifactId>
+            <version>${resilience4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.8.6</version>
+            <version>${springdoc-openapi.version}</version>
         </dependency>
 
         <dependency>
@@ -133,18 +138,20 @@
             <version>${instancio.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.wiremock</groupId>
+            <artifactId>wiremock-standalone</artifactId>
+            <version>${wiremock.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.wiremock.integrations.testcontainers</groupId>
+            <artifactId>wiremock-testcontainers-module</artifactId>
+            <version>${wiremock-testcontainers.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+
 
     <build>
         <plugins>
@@ -201,7 +208,7 @@
             <plugin>
                 <groupId>com.diffplug.spotless</groupId>
                 <artifactId>spotless-maven-plugin</artifactId>
-                <version>2.43.0</version>
+                <version>${spotless-maven-plugin.version}</version>
                 <configuration>
                     <java>
                         <importOrder/>
