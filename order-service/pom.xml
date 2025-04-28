@@ -34,6 +34,8 @@
         <wiremock.version>3.13.0</wiremock.version>
         <wiremock-testcontainers.version>1.0-alpha-15</wiremock-testcontainers.version>
         <spotless-maven-plugin.version>2.44.3</spotless-maven-plugin.version>
+        <shedlock-spring.version>6.4.0</shedlock-spring.version>
+        <shedlock-provider-jdbc-template.version>6.4.0</shedlock-provider-jdbc-template.version>
         <dockerImageName>rdisckyzp/bookstore-${project.artifactId}</dockerImageName>
     </properties>
     <dependencies>
@@ -149,6 +151,16 @@
             <artifactId>wiremock-testcontainers-module</artifactId>
             <version>${wiremock-testcontainers.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.javacrumbs.shedlock</groupId>
+            <artifactId>shedlock-spring</artifactId>
+            <version>${shedlock-spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.javacrumbs.shedlock</groupId>
+            <artifactId>shedlock-provider-jdbc-template</artifactId>
+            <version>${shedlock-provider-jdbc-template.version}</version>
         </dependency>
     </dependencies>
 
