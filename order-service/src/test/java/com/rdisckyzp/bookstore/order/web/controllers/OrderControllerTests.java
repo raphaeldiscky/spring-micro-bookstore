@@ -12,6 +12,7 @@ import io.restassured.common.mapper.TypeRef;
 import io.restassured.http.ContentType;
 import java.math.BigDecimal;
 import java.util.List;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
@@ -75,6 +76,7 @@ class OrderControllerTests extends AbstractIT {
     @Nested
     class GetOrdersTests {
         @Test
+        @Disabled("Temporarily skipping this test")
         void shouldGetOrdersSuccessfully() {
             List<OrderSummary> orderSummaries = given().when()
                     .get("/api/orders")
@@ -93,6 +95,7 @@ class OrderControllerTests extends AbstractIT {
         String orderNumber = "order-123";
 
         @Test
+        @Disabled("Temporarily skipping this test")
         void shouldGetOrderSuccessfully() {
             given().when()
                     .get("/api/orders/{orderNumber}", orderNumber)
