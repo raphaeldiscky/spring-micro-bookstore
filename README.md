@@ -12,10 +12,14 @@
 
 ![rabbitmq-architecture](docs/rabbitmq-architecture.png)
 
-### Resilience Patterns
+### Resilience patterns
 
 ![resilience-patterns](docs/resilience-patterns.png)
 
 ### Outbox pattern
 
 ![outbox-pattern](docs/outbox-pattern.png)
+
+### API gateway
+
+![api-gateway](docs/api-gateway.png)
