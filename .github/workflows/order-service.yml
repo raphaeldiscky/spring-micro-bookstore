@@ -1,7 +1,6 @@
 name: Order Service
 
 on:
-  workflow_dispatch:
   push:
     paths:
       - order-service/**
