@@ -40,9 +40,9 @@ spring:
         - id: order-service
           uri: ${ORDER_SERVICE_URL:http://localhost:8082}
           predicates:
-            - Path=/orders/**
+            - Path=/order/**
           filters:
-            - RewritePath=/orders/?(?<segment>.*), /${segment}
+            - RewritePath=/order/?(?<segment>.*), /${segment}
         - id: openapi
           uri: http://localhost:${server.port}
           predicates:
@@ -63,4 +63,4 @@ springdoc:
 #      - name: catalog
 #        url: /v3/api-docs/catalog
 #      - name: orders
-#        url: /v3/api-docs/orders
+#        url: /v3/api-docs/order
