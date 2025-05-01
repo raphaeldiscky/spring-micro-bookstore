@@ -1,25 +1,37 @@
-# spring-micro
+# Spring Micro Bookstore
 
-### Microservices architecture
+---
 
-<img src="docs/architecture.png" width="600"/>
+## Architecture Diagrams
 
-### Package by components
+<details>
+  <summary><strong>Microservices architecture</strong></summary>
+  <img src="docs/architecture.png" width="600"/>
+</details>
 
-<img src="docs/package-by-components.png" width="600"/>
+<details>
+  <summary><strong>Package by components</strong></summary>
+  <img src="docs/package-by-components.png" width="600"/>
+</details>
 
-### RabbitMQ architecture
+<details>
+  <summary><strong>RabbitMQ architecture</strong></summary>
+  <img src="docs/rabbitmq-architecture.png" width="600"/>
+</details>
 
-<img src="docs/rabbitmq-architecture.png" width="600"/>
+<details>
+  <summary><strong>Resilience patterns</strong></summary>
+  <img src="docs/resilience-patterns.png" width="600"/>
+</details>
 
-### Resilience patterns
+<details>
+  <summary><strong>Outbox pattern</strong></summary>
+  <img src="docs/outbox-pattern.png" width="600"/>
+</details>
 
-<img src="docs/resilience-patterns.png" width="600"/>
+<details>
+  <summary><strong>API gateway</strong></summary>
+  <img src="docs/api-gateway.png" width="600"/>
+</details>
 
-### Outbox pattern
-
-<img src="docs/outbox-pattern.png" width="600"/>
-
-### API gateway
-
-<img src="docs/api-gateway.png" width="600"/>
+---
