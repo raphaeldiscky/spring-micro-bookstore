@@ -1,7 +1,5 @@
 # Spring Micro Bookstore
 
----
-
 ## Architecture Diagrams
 
 <details>
@@ -34,4 +32,4 @@
   <img src="docs/api-gateway.png" width="600"/>
 </details>
 
----
+
