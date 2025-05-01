@@ -12,7 +12,7 @@
     <artifactId>bookstore-webapp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>bookstore-webapp</name>
-    <description>BookStore WebApp</description>
+    <description>Bookstore Webapp</description>
     <url/>
     <licenses>
         <license/>
@@ -33,7 +33,7 @@
         <webjars-font-awesome.version>6.7.2</webjars-font-awesome.version>
         <webjars-alpinejs.version>3.14.9</webjars-alpinejs.version>
         <spotless-maven-plugin.version>2.44.3</spotless-maven-plugin.version>
-        <dockerImageName>rdisckyzp/bookstore-${project.artifactId}</dockerImageName>
+        <dockerImageName>rdisckyzp/${project.artifactId}</dockerImageName>
     </properties>
     <dependencies>
         <dependency>
