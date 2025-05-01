@@ -1,4 +1,4 @@
-name: Bookstore Webapp
+name: BookStore WebApp
 
 on:
   push:
