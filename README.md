@@ -2,24 +2,24 @@
 
 ### Microservices architecture
 
-![architecture](docs/architecture.png)
+<img src="docs/architecture.png" width="600"/>
 
 ### Package by components
 
-![package-by-components](docs/package-by-components.png)
+<img src="docs/package-by-components.png" width="600"/>
 
 ### RabbitMQ architecture
 
-![rabbitmq-architecture](docs/rabbitmq-architecture.png)
+<img src="docs/rabbitmq-architecture.png" width="600"/>
 
 ### Resilience patterns
 
-![resilience-patterns](docs/resilience-patterns.png)
+<img src="docs/resilience-patterns.png" width="600"/>
 
 ### Outbox pattern
 
-![outbox-pattern](docs/outbox-pattern.png)
+<img src="docs/outbox-pattern.png" width="600"/>
 
 ### API gateway
 
-![api-gateway](docs/api-gateway.png)
+<img src="docs/api-gateway.png" width="600"/>
