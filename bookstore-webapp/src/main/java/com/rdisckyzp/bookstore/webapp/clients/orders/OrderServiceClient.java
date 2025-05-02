@@ -1,18 +1,21 @@
 package com.rdisckyzp.bookstore.webapp.clients.orders;
 
-import java.util.List;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.service.annotation.GetExchange;
 import org.springframework.web.service.annotation.PostExchange;
 
+import java.util.List;
+import java.util.Map;
+
 public interface OrderServiceClient {
     @PostExchange("/order/api/orders")
-    OrderConfirmationDTO createOrder(@RequestBody CreateOrderRequest orderRequest);
+    OrderConfirmationDTO createOrder(@RequestHeader Map<String, ?> headers, @RequestBody CreateOrderRequest orderRequest);
 
     @GetExchange("/order/api/orders")
-    List<OrderSummary> getOrders();
+    List<OrderSummary> getOrders(@RequestHeader Map<String, ?> headers);
 
     @GetExchange("/order/api/orders/{orderNumber}")
-    OrderDTO getOrder(@PathVariable String orderNumber);
+    OrderDTO getOrder(@RequestHeader Map<String, ?> headers, @PathVariable String orderNumber);
 }
