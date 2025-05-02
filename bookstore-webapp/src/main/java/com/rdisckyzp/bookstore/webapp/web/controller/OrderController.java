@@ -2,14 +2,13 @@ package com.rdisckyzp.bookstore.webapp.web.controller;
 
 import com.rdisckyzp.bookstore.webapp.clients.orders.*;
 import com.rdisckyzp.bookstore.webapp.service.SecurityHelper;
+import java.util.List;
+import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Map;
 
 @Controller
 public class OrderController {
