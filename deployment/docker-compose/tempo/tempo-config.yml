@@ -8,6 +8,7 @@ distributor:
         grpc:
         http:
     zipkin:
+      endpoint: 0.0.0.0:9411
 
 ingester:
   trace_idle_period: 10s
