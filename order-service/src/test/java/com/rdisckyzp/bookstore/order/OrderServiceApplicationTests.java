@@ -2,7 +2,7 @@ package com.rdisckyzp.bookstore.order;
 
 import org.junit.jupiter.api.Test;
 
-class OrderServiceApplicationTests {
+class OrderServiceApplicationTests extends AbstractIT {
 
     @Test
     void contextLoads() {}
