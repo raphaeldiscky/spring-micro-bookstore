@@ -4,6 +4,8 @@ import com.rdisckyzp.bookstore.catalog.domain.PagedResult;
 import com.rdisckyzp.bookstore.catalog.domain.Product;
 import com.rdisckyzp.bookstore.catalog.domain.ProductNotFoundException;
 import com.rdisckyzp.bookstore.catalog.domain.ProductService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/products")
 class ProductController {
     private final ProductService productService;
+    private static final Logger log = LoggerFactory.getLogger(ProductController.class);
 
     ProductController(ProductService productService) {
         this.productService = productService;
@@ -18,12 +21,13 @@ class ProductController {
 
     @GetMapping
     PagedResult<Product> getProducts(@RequestParam(name = "page", defaultValue = "1") int pageNo) {
+        log.info("Fetching products for page: {}", pageNo);
         return productService.getProducts(pageNo);
     }
 
     @GetMapping("/{code}")
     ResponseEntity<Product> getProductByCode(@PathVariable String code) {
-
+        log.info("Fetching product with code: {}", code);
         return productService
                 .getProductByCode(code)
                 .map(ResponseEntity::ok)

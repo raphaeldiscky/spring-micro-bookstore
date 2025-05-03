@@ -18,6 +18,8 @@ services:
       resources:
         limits:
           memory: 700m
+    labels:
+      logging: "promtail"
 
   order-service:
     image: rdisckyzp/bookstore-order-service
@@ -44,6 +46,8 @@ services:
       resources:
         limits:
           memory: 700m
+    labels:
+      logging: "promtail"
 
   notification-service:
     image: rdisckyzp/bookstore-notification-service
@@ -71,6 +75,9 @@ services:
       resources:
         limits:
           memory: 700m
+    labels:
+      logging: "promtail"
+
 
   api-gateway:
     image: rdisckyzp/bookstore-api-gateway
@@ -86,6 +93,8 @@ services:
       resources:
         limits:
           memory: 700m
+    labels:
+      logging: "promtail"
 
   bookstore-webapp:
     image: rdisckyzp/bookstore-webapp
@@ -100,3 +109,5 @@ services:
       resources:
         limits:
           memory: 700m
+    labels:
+      logging: "promtail"
