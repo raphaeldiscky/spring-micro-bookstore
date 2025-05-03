@@ -1,22 +1,21 @@
 package com.rdisckyzp.bookstore.order.web.controllers;
 
+import static io.restassured.RestAssured.given;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
+
 import com.rdisckyzp.bookstore.order.AbstractIT;
 import com.rdisckyzp.bookstore.order.domain.models.OrderSummary;
 import com.rdisckyzp.bookstore.order.testdata.TestDataFactory;
 import io.restassured.common.mapper.TypeRef;
 import io.restassured.http.ContentType;
+import java.math.BigDecimal;
+import java.util.List;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.jdbc.Sql;
-
-import java.math.BigDecimal;
-import java.util.List;
-
-import static io.restassured.RestAssured.given;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.notNullValue;
 
 @Sql("/test-orders.sql")
 class OrderControllerTests extends AbstractIT {
@@ -83,8 +82,7 @@ class OrderControllerTests extends AbstractIT {
                     .statusCode(200)
                     .extract()
                     .body()
-                    .as(new TypeRef<>() {
-                    });
+                    .as(new TypeRef<>() {});
 
             assertThat(orderSummaries).hasSize(2);
         }
