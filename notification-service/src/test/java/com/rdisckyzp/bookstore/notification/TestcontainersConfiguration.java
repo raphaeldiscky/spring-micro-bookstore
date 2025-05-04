@@ -9,16 +9,18 @@ import org.testcontainers.utility.DockerImageName;
 
 @TestConfiguration(proxyBeanMethods = false)
 class TestcontainersConfiguration {
+    static final String POSTGRES_IMAGE_NAME = "postgres:16-alpine";
+    static final String RABBITMQ_IMAGE_NAME = "rabbitmq:4.1-management";
 
     @Bean
     @ServiceConnection
     PostgreSQLContainer<?> postgresContainer() {
-        return new PostgreSQLContainer<>(DockerImageName.parse("postgres:16-alpine"));
+        return new PostgreSQLContainer<>(DockerImageName.parse(POSTGRES_IMAGE_NAME));
     }
 
     @Bean
     @ServiceConnection
     RabbitMQContainer rabbitContainer() {
-        return new RabbitMQContainer(DockerImageName.parse("rabbitmq:4.1-management"));
+        return new RabbitMQContainer(DockerImageName.parse(RABBITMQ_IMAGE_NAME));
     }
 }

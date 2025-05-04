@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.4</version>
+        <version>3.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.rdisckyzp</groupId>
-    <artifactId>order-service</artifactId>
+    <artifactId>billing-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>order-service</name>
-    <description>Order Service</description>
+    <name>billing-service</name>
+    <description>Billing Service</description>
     <url/>
     <licenses>
         <license/>
@@ -28,24 +28,17 @@
     </scm>
     <properties>
         <java.version>21</java.version>
+        <grpc.version>1.72.0</grpc.version>
         <springdoc-openapi.version>2.8.6</springdoc-openapi.version>
-        <resilience4j.version>2.3.0</resilience4j.version>
-        <instancio.version>5.4.0</instancio.version>
-        <wiremock.version>3.13.0</wiremock.version>
-        <wiremock-testcontainers.version>1.0-alpha-15</wiremock-testcontainers.version>
         <spotless-maven-plugin.version>2.44.3</spotless-maven-plugin.version>
-        <shedlock-spring.version>6.4.0</shedlock-spring.version>
-        <shedlock-provider-jdbc-template.version>6.4.0</shedlock-provider-jdbc-template.version>
+        <protobuf-java.version>4.30.2</protobuf-java.version>
+        <spring-grpc.version>0.8.0</spring-grpc.version>
         <dockerImageName>rdisckyzp/bookstore-${project.artifactId}</dockerImageName>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -60,6 +53,10 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-services</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
         </dependency>
@@ -68,14 +65,8 @@
             <artifactId>flyway-database-postgresql</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.github.resilience4j</groupId>
-            <artifactId>resilience4j-spring-boot3</artifactId>
-            <version>${resilience4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>${springdoc-openapi.version}</version>
+            <groupId>org.springframework.grpc</groupId>
+            <artifactId>spring-grpc-server-web-spring-boot-starter</artifactId>
         </dependency>
         <!-- Observability -->
         <dependency>
@@ -92,7 +83,6 @@
             <artifactId>opentelemetry-exporter-zipkin</artifactId>
         </dependency>
         <!-- -->
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -121,8 +111,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework.amqp</groupId>
-            <artifactId>spring-rabbit-test</artifactId>
+            <groupId>org.springframework.grpc</groupId>
+            <artifactId>spring-grpc-test</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -135,48 +125,19 @@
             <artifactId>postgresql</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>rabbitmq</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.instancio</groupId>
-            <artifactId>instancio-junit</artifactId>
-            <version>${instancio.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.wiremock</groupId>
-            <artifactId>wiremock-standalone</artifactId>
-            <version>${wiremock.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.wiremock.integrations.testcontainers</groupId>
-            <artifactId>wiremock-testcontainers-module</artifactId>
-            <version>${wiremock-testcontainers.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- Distributed Lock -->
-        <dependency>
-            <groupId>net.javacrumbs.shedlock</groupId>
-            <artifactId>shedlock-spring</artifactId>
-            <version>${shedlock-spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.javacrumbs.shedlock</groupId>
-            <artifactId>shedlock-provider-jdbc-template</artifactId>
-            <version>${shedlock-provider-jdbc-template.version}</version>
-        </dependency>
-        <!-- Distributed Lock -->
+        <!-- -->
     </dependencies>
-
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.grpc</groupId>
+                <artifactId>spring-grpc-dependencies</artifactId>
+                <version>${spring-grpc.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
@@ -191,6 +152,44 @@
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>1.7.1</version>
+                <executions>
+                    <execution>
+                        <id>initialize</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>detect</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>0.6.1</version>
+                <configuration>
+                    <protocArtifact>com.google.protobuf:protoc:${protobuf-java.version}:exe:${os.detected.classifier}
+                    </protocArtifact>
+                    <pluginId>grpc-java</pluginId>
+                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}
+                    </pluginArtifact>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>compile-custom</goal>
+                        </goals>
+                        <configuration>
+                            <pluginParameter>jakarta_omit,@generated=omit</pluginParameter>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
