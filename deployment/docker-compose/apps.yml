@@ -84,6 +84,28 @@ services:
     labels:
       logging: "promtail"
 
+  billing-service:
+    image: rdisckyzp/bookstore-billing-service
+    container_name: billing-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - DB_URL=jdbc:postgresql://catalog-db:5432/postgres
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - MANAGEMENT_TRACING_ENABLED=true
+      - MANAGEMENT_ZIPKIN_TRACING_ENDPOINT=http://tempo:9411
+    ports:
+      - "8083:8083"
+    restart: unless-stopped
+    depends_on:
+      billing-db:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    labels:
+      logging: "promtail"
 
   api-gateway:
     image: rdisckyzp/bookstore-api-gateway
