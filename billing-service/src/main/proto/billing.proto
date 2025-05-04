@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.rdisckyzp.bookstore.billing";
+
+
+message BillingRequest {
+  string orderId = 1;
+  string orderNumber = 2;
+  string username = 3;
+  string email = 4;
+  string amount = 5;
+}
+
+message BillingResponse {
+  string accountId = 1;
+  string status = 2;
+}
+
+service BillingService {
+  rpc CreateBillingAccount (BillingRequest) returns (BillingResponse);
+}
