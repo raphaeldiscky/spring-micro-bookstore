@@ -18,14 +18,14 @@ application.
   `JPA/Hibernate` for ORM
 - ✅ Testing with `JUnit 5`; supporting tools include `TestContainers` for integration tests, `REST Assured` for API
   testing, `WireMock` for mocking external dependencies, and `Instancio` for generating test data
-- ✅ Observability with `Spring Boot Actuator` endpoints, `Prometheus` for metrics collection, `Grafana` for
-  visualization, `OpenTelemetry` for distributed tracing, `Tempo` for trace storage, and `Loki` for log aggregation
+- ✅ Observability with `Spring Boot Actuator` endpoints, `OpenTelemetry` for distributed tracing, `Prometheus` for metrics collection, `Grafana` for
+  visualization, `Tempo` for trace storage, and `Loki` for log aggregation
 - ✅ Containerized deployments using `Docker` and `docker-compose`
 - 🚧 Add `Kubernetes` for container orchestration and deployment
 
 ## Technologies - Libraries 🛠️
 
-### Core Framework
+<h4>Core Framework</h4>
 
 - **[Spring Boot](https://spring.io/projects/spring-boot)** - Framework for building web applications
 - **[Spring Data JPA](https://spring.io/projects/spring-data-jpa)** - Data access layer
@@ -35,34 +35,32 @@ application.
   Development tools
 - **[gRPC](https://grpc.io/)** - High-performance RPC framework
 
-### Database & Migration
+<h4>Message Brokers</h4>
+
+- **[RabbitMQ](https://www.rabbitmq.com/)** - Message broker implementing AMQP
+- **[Apache Kafka](https://kafka.apache.org/)** - Distributed event streaming platform
+
+<h4>Database & Migration</h4>
 
 - **[PostgreSQL](https://www.postgresql.org/)** - Advanced open-source database
 - **[Flyway](https://flywaydb.org/)** - Database migration tool
 - **[Spring Data JPA](https://spring.io/projects/spring-data-jpa)** - Data access layer
 - **[Hibernate](https://hibernate.org/)** - Object-relational mapping framework
 
-### API Documentation
-
-- **[SpringDoc OpenAPI](https://springdoc.org/)** - API documentation with OpenAPI 3
-- **[Swagger UI](https://swagger.io/tools/swagger-ui/)** - Interactive API documentation
-
-### Resilience & Stability
+<h4>Resilience & Stability</h4>
 
 - **[Resilience4j](https://resilience4j.readme.io/)** - Fault tolerance library
 - **[ShedLock](https://github.com/lukas-krecan/ShedLock)** - Distributed lock implementation
 
-### Testing
+<h4>Testing & Mocking</h4>
 
 - **[JUnit 5](https://junit.org/junit5/)** - Unit testing framework
 - **[TestContainers](https://www.testcontainers.org/)** - Integration testing with containers
 - **[REST Assured](https://rest-assured.io/)** - REST API testing
-- **[Spring Boot Test](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.testing)
-  ** - Spring Boot testing support
 - **[WireMock](https://wiremock.org/)** - API mocking
 - **[Instancio](https://www.instancio.org/)** - Test data generation
 
-### Observability
+<h4>Observability & Monitoring</h4>
 
 - **[Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)** -
   Production-ready features
@@ -73,12 +71,21 @@ application.
 - **[Tempo](https://grafana.com/oss/tempo/)** - Distributed tracing backend (Grafana's tracing solution)
 - **[Loki](https://grafana.com/oss/loki/)** - Log aggregation system
 
-### Build & Development
+<h4>Documentation</h4>
+
+- **[SpringDoc OpenAPI](https://springdoc.org/)** - API documentation with OpenAPI 3
+- **[Swagger UI](https://swagger.io/tools/swagger-ui/)** - Interactive API documentation
+
+<h4>Build & Development</h4>
 
 - **[Maven](https://maven.apache.org/)** - Build automation tool
 - **[Spotless](https://github.com/diffplug/spotless)** - Code formatting
 - **[Git Commit ID Maven Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin)** - Git information in
   builds
+
+<h4>Deployment & DevOps</h4>
+
+- **[Docker](https://www.docker.com/)** - Container platform
 
 ## System Architecture 🏗️
 
