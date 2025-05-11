@@ -1,6 +1,8 @@
 <h1 align="center">Spring Micro Bookstore 📚</h1>
 
-This application is primarily intended for exploring technical concepts. My goal is to experiment with different technologies, software architecture designs, and all the essential components involved in building a microservices-based application.
+This application is primarily intended for exploring technical concepts. My goal is to experiment with different
+technologies, software architecture designs, and all the essential components involved in building a microservices-based
+application.
 
 ## Features :sparkles:
 
@@ -10,11 +12,15 @@ This application is primarily intended for exploring technical concepts. My goal
 - ✅ Implementing the `API Gateway` pattern to handle routing
 - ✅ Applying the `Outbox Pattern` to ensure reliable and consistent event publishing
 - ✅ Managing distributed task execution with ShedLock to prevent duplicate processing via `Distributed Locking`
-- ✅ Ensuring system resilience using `Resilience4j`, with support for circuit breakers, retries, rate limiting, and timeout handling
-- ✅ Utilizing `PostgreSQL` for persistent storage, `Flyway` for version-controlled database migrations, and `JPA/Hibernate` for ORM
-- ✅ Testing with `JUnit 5`; supporting tools include `TestContainers` for integration tests, `REST Assured` for API testing, `WireMock` for mocking external dependencies, and `Instancio` for generating test data
-- ✅ Observability with `Spring Boot Actuator` endpoints, `Prometheus` for metrics collection, `Grafana` for visualization, `OpenTelemetry` for distributed tracing, `Tempo` for trace storage, and `Loki` for log aggregation
-- ✅ Containerizing and orchestrating services using `Docker` and `docker-compose` for streamlined local deployment and development
+- ✅ Ensuring system resilience using `Resilience4j`, with support for circuit breakers, retries, rate limiting, and
+  timeout handling
+- ✅ Utilizing `PostgreSQL` for persistent storage, `Flyway` for version-controlled database migrations, and
+  `JPA/Hibernate` for ORM
+- ✅ Testing with `JUnit 5`; supporting tools include `TestContainers` for integration tests, `REST Assured` for API
+  testing, `WireMock` for mocking external dependencies, and `Instancio` for generating test data
+- ✅ Observability with `Spring Boot Actuator` endpoints, `Prometheus` for metrics collection, `Grafana` for
+  visualization, `OpenTelemetry` for distributed tracing, `Tempo` for trace storage, and `Loki` for log aggregation
+- ✅ Containerized deployments using `Docker` and `docker-compose`
 - 🚧 Add `Kubernetes` for container orchestration and deployment
 
 ## Technologies - Libraries 🛠️
@@ -23,8 +29,10 @@ This application is primarily intended for exploring technical concepts. My goal
 
 - **[Spring Boot](https://spring.io/projects/spring-boot)** - Framework for building web applications
 - **[Spring Data JPA](https://spring.io/projects/spring-data-jpa)** - Data access layer
-- **[Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)** - Production-ready features
-- **[Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.devtools)** - Development tools
+- **[Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)** -
+  Production-ready features
+- **[Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.devtools)** -
+  Development tools
 - **[gRPC](https://grpc.io/)** - High-performance RPC framework
 
 ### Database & Migration
@@ -49,13 +57,15 @@ This application is primarily intended for exploring technical concepts. My goal
 - **[JUnit 5](https://junit.org/junit5/)** - Unit testing framework
 - **[TestContainers](https://www.testcontainers.org/)** - Integration testing with containers
 - **[REST Assured](https://rest-assured.io/)** - REST API testing
-- **[Spring Boot Test](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.testing)** - Spring Boot testing support
+- **[Spring Boot Test](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.testing)
+  ** - Spring Boot testing support
 - **[WireMock](https://wiremock.org/)** - API mocking
 - **[Instancio](https://www.instancio.org/)** - Test data generation
 
 ### Observability
 
-- **[Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)** - Production-ready features
+- **[Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)** -
+  Production-ready features
 - **[Micrometer](https://micrometer.io/)** - Application metrics facade
 - **[Prometheus](https://prometheus.io/)** - Metrics collection and storage
 - **[Grafana](https://grafana.com/)** - Metrics visualization and dashboards
@@ -67,7 +77,8 @@ This application is primarily intended for exploring technical concepts. My goal
 
 - **[Maven](https://maven.apache.org/)** - Build automation tool
 - **[Spotless](https://github.com/diffplug/spotless)** - Code formatting
-- **[Git Commit ID Maven Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin)** - Git information in builds
+- **[Git Commit ID Maven Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin)** - Git information in
+  builds
 
 ## System Architecture 🏗️
 
