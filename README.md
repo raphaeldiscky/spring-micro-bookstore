@@ -1,4 +1,4 @@
-<h1 align="center">Spring Micro Bookstore</h1>
+<h1 align="center">Spring Micro Bookstore 📚</h1>
 
 This application is primarily intended for exploring technical concepts. My goal is to experiment with different technologies, software architecture designs, and all the essential components involved in building a microservices-based application.
 
@@ -17,7 +17,7 @@ This application is primarily intended for exploring technical concepts. My goal
 - ✅ Containerizing and orchestrating services using Docker and `docker-compose` for streamlined local deployment and development
 - 🚧 Add `Kubernetes` for container orchestration and deployment
 
-## Technologies - Libraries
+## Technologies - Libraries 🛠️
 
 ### Core Framework
 
@@ -69,7 +69,7 @@ This application is primarily intended for exploring technical concepts. My goal
 - **[Spotless](https://github.com/diffplug/spotless)** - Code formatting
 - **[Git Commit ID Maven Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin)** - Git information in builds
 
-## System Architecture
+## System Architecture 🏗️
 
 <summary><strong>System Architecture Overview</strong></summary>
 <img src="docs/spring-micro-bookstore-architecture.png" width="600"/>
