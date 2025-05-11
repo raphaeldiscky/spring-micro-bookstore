@@ -25,6 +25,7 @@ This application is primarily intended for exploring technical concepts. My goal
 - **[Spring Data JPA](https://spring.io/projects/spring-data-jpa)** - Data access layer
 - **[Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)** - Production-ready features
 - **[Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.devtools)** - Development tools
+- **[Maven](https://maven.apache.org/)** - Build automation and dependency management tool
 - **[gRPC](https://grpc.io/)** - High-performance RPC framework
 
 ### Database & Migration
