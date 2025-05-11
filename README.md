@@ -14,7 +14,7 @@ This application is primarily intended for exploring technical concepts. My goal
 - ✅ Utilizing `PostgreSQL` for persistent storage, `Flyway` for version-controlled database migrations, and `JPA/Hibernate` for ORM
 - ✅ Testing with `JUnit 5`; supporting tools include `TestContainers` for integration tests, `REST Assured` for API testing, `WireMock` for mocking external dependencies, and `Instancio` for generating test data
 - ✅ Observability with `Spring Boot Actuator` endpoints, `Prometheus` for metrics collection, `Grafana` for visualization, `OpenTelemetry` for distributed tracing, `Tempo` for trace storage, and `Loki` for log aggregation
-- ✅ Containerizing and orchestrating services using Docker and `docker-compose` for streamlined local deployment and development
+- ✅ Containerizing and orchestrating services using `Docker` and `docker-compose` for streamlined local deployment and development
 - 🚧 Add `Kubernetes` for container orchestration and deployment
 
 ## Technologies - Libraries 🛠️
@@ -25,7 +25,6 @@ This application is primarily intended for exploring technical concepts. My goal
 - **[Spring Data JPA](https://spring.io/projects/spring-data-jpa)** - Data access layer
 - **[Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)** - Production-ready features
 - **[Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.devtools)** - Development tools
-- **[Maven](https://maven.apache.org/)** - Build automation and dependency management tool
 - **[gRPC](https://grpc.io/)** - High-performance RPC framework
 
 ### Database & Migration
