@@ -1,29 +1,29 @@
-<h1 align="center">Spring Micro Bookstore 📚</h1>
+<h1 align="center">Spring Micro Bookstore</h1>
 
 This application is primarily intended for exploring technical concepts. My goal is to experiment with different
 technologies, software architecture designs, and all the essential components involved in building a microservices-based
 application.
 
-## Features :sparkles:
+## Features
 
-- ✅ Using `Event-Driven Architecture` built on top of RabbitMQ and Kafka for asynchronous communication between services
-- ✅ Building RESTful APIs using `Spring Boot`, with integrated `Swagger/OpenAPI` for interactive documentation
-- ✅ Leveraging `gRPC` for efficient internal service-to-service communication
-- ✅ Implementing the `API Gateway` pattern to handle routing
-- ✅ Applying the `Outbox Pattern` to ensure reliable and consistent event publishing
-- ✅ Managing distributed task execution with ShedLock to prevent duplicate processing via `Distributed Locking`
-- ✅ Ensuring system resilience using `Resilience4j`, with support for circuit breakers, retries, rate limiting, and
+- Using `Event-Driven Architecture` built on top of RabbitMQ and Kafka for asynchronous communication between services
+- Building RESTful APIs using `Spring Boot`, with integrated `Swagger/OpenAPI` for interactive documentation
+- Leveraging `gRPC` for efficient internal service-to-service communication
+- Implementing the `API Gateway` pattern to handle routing
+- Applying the `Outbox Pattern` to ensure reliable and consistent event publishing
+- Managing distributed task execution with ShedLock to prevent duplicate processing via `Distributed Locking`
+- Ensuring system resilience using `Resilience4j`, with support for circuit breakers, retries, rate limiting, and
   timeout handling
-- ✅ Utilizing `PostgreSQL` for persistent storage, `Flyway` for version-controlled database migrations, and
+- Utilizing `PostgreSQL` for persistent storage, `Flyway` for version-controlled database migrations, and
   `JPA/Hibernate` for ORM
-- ✅ Testing with `JUnit 5`; supporting tools include `TestContainers` for integration tests, `REST Assured` for API
+- Testing with `JUnit 5`; supporting tools include `TestContainers` for integration tests, `REST Assured` for API
   testing, `WireMock` for mocking external dependencies, and `Instancio` for generating test data
-- ✅ Observability with `Spring Boot Actuator` endpoints, `OpenTelemetry` for distributed tracing, `Prometheus` for metrics collection, `Grafana` for
+- Observability with `Spring Boot Actuator` endpoints, `OpenTelemetry` for distributed tracing, `Prometheus` for metrics collection, `Grafana` for
   visualization, `Tempo` for trace storage, and `Loki` for log aggregation
-- ✅ Containerized deployments using `Docker` and `docker-compose`
+- Containerized deployments using `Docker` and `docker-compose`
 - 🚧 Add `Kubernetes` for container orchestration and deployment
 
-## Technologies - Libraries 🛠️
+## Technologies - Libraries 
 
 <h4>Core Framework</h4>
 
@@ -87,7 +87,7 @@ application.
 
 - **[Docker](https://www.docker.com/)** - Container platform
 
-## System Architecture 🏗️
+## System Architecture
 
 <summary><strong>System Architecture Overview</strong></summary>
 <img src="docs/spring-micro-bookstore-architecture.png" width="600"/>
