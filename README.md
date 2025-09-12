@@ -21,7 +21,6 @@ application.
 - Observability with `Spring Boot Actuator` endpoints, `OpenTelemetry` for distributed tracing, `Prometheus` for metrics collection, `Grafana` for
   visualization, `Tempo` for trace storage, and `Loki` for log aggregation
 - Containerized deployments using `Docker` and `docker-compose`
-- 🚧 Add `Kubernetes` for container orchestration and deployment
 
 ## Technologies - Libraries 
 
