@@ -6,7 +6,7 @@ application.
 
 ## Features
 
-- Using `Event-Driven Architecture` built on top of RabbitMQ and Kafka for asynchronous communication between services
+- Using `Event-Driven Architecture` built on top of RabbitMQ for asynchronous communication between services
 - Building RESTful APIs using `Spring Boot`, with integrated `Swagger/OpenAPI` for interactive documentation
 - Leveraging `gRPC` for efficient internal service-to-service communication
 - Implementing the `API Gateway` pattern to handle routing
@@ -22,7 +22,7 @@ application.
   visualization, `Tempo` for trace storage, and `Loki` for log aggregation
 - Containerized deployments using `Docker` and `docker-compose`
 
-## Technologies - Libraries 
+## Technologies - Libraries
 
 <h4>Core Framework</h4>
 
@@ -37,7 +37,6 @@ application.
 <h4>Message Brokers</h4>
 
 - **[RabbitMQ](https://www.rabbitmq.com/)** - Message broker implementing AMQP
-- **[Apache Kafka](https://kafka.apache.org/)** - Distributed event streaming platform
 
 <h4>Database & Migration</h4>
 
